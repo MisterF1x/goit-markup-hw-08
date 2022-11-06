@@ -3,19 +3,12 @@
   padding-bottom: 60px;
   background-color: $background-color;
   color: #fff;
-
-  .container {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-  }
+  text-align: center;
   &__wraper {
-    &:first-child {
-      flex-basis: 231px;
-    }
-    &:last-child {
-      flex-basis: 570px;
-    }
+    margin-bottom: 60px;
+  }
+  &--last {
+    margin-bottom: 0;
   }
   &__title {
     font-weight: 700;
@@ -30,6 +23,12 @@
   line-height: 1.71;
 }
 .address-list {
+  &__item {
+    margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
   &__link {
     color: rgba(255, 255, 255, 0.6);
 

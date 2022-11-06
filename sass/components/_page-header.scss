@@ -1,55 +1,50 @@
 .page-header {
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
   border-bottom: 1px solid #ececec;
+  position: relative;
+  height: 40px;
   .container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
   }
 }
 
-.navigation {
-  display: flex;
-  align-items: center;
+.wraper-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-left: 40px;
+  padding-right: 15px;
+  background-color: #fff;
+  overflow-y: scroll;
+  transform: translateX(-100%);
+  visibility: hidden;
+  z-index: 999;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.wraper-menu.is-open {
+  transform: translateX(0);
+  visibility: visible;
+}
 .menu {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  margin-left: 93px;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
 
+  &__item {
+    margin-bottom: 32px;
+    &:last-child {
+      margin-bottom: 306px;
+    }
+  }
   &__link {
-    display: flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    position: relative;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &::after {
-      content: '';
-      display: block;
-      background-color: $primary-color;
-      width: 100%;
-      height: 4px;
-      border-radius: 2px;
-      position: absolute;
-      left: 0;
-      bottom: -1px;
-      transform: scaleX(0);
-      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    &:hover::after,
-    &:focus::after {
-      transform: scaleX(1);
-    }
-
+    letter-spacing: 0.02em;
     &:hover,
     &:focus {
       color: $primary-color;
-      transform: scaleX(1);
     }
   }
   &--current {
@@ -59,20 +54,45 @@
 
 .header-contact {
   color: $text-accent-color;
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  margin-left: auto;
-
+  margin-bottom: 64px;
+  &__item {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.17;
+    &:first-child {
+      font-size: 34px;
+      line-height: 1.14;
+      color: $primary-color;
+      margin-bottom: 32px;
+    }
+  }
   &__link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    letter-spacing: 0.02em;
+    color: inherit;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,
     &:focus {
       color: $primary-color;
     }
+  }
+  &__icon {
+    display: none;
+  }
+}
+.btn-menu {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.close {
+  margin-left: auto;
+  &:hover,
+  &:focus {
+    color: $primary-color;
   }
 }

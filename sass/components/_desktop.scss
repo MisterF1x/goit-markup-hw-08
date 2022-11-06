@@ -1,0 +1,117 @@
+@media screen and (min-width: 1200px) {
+  .header-contact {
+    flex-direction: row;
+    &__item {
+      margin-right: 0;
+      &:last-child {
+        margin-right: 30px;
+        margin-bottom: 0;
+      }
+    }
+    &__link {
+      font-size: 14px;
+    }
+    &__icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 10px;
+    }
+  }
+  .container {
+    max-width: 1200px;
+  }
+  .section {
+    padding: 94px 0;
+    &__title {
+      margin-bottom: 50px;
+      font-size: 36px;
+      line-height: 1.17;
+    }
+  }
+  .section:nth-child(3) {
+    display: block;
+  }
+  .navigation {
+    margin-left: 92px;
+  }
+  .hero {
+    &__container {
+      max-width: 1600px;
+      padding: 200px 0;
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero.jpg);
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+          url(../images/hero@2x.jpg);
+      }
+    }
+    &__title {
+      font-size: 44px;
+      line-height: 1.36;
+      width: 696px;
+    }
+  }
+  .feature-list {
+    flex-wrap: nowrap;
+    &__item {
+      flex-basis: calc((100% - 120px) / 4);
+    }
+  }
+  .team-list {
+    flex-wrap: nowrap;
+    &__item {
+      flex-basis: calc((100% - 120px) / 4);
+    }
+  }
+  .clients-list {
+    flex-wrap: nowrap;
+  }
+  .filter {
+    display: flex;
+    justify-content: center;
+  }
+  .projects {
+    &__item {
+      flex-basis: calc((100% - 90px) / 3);
+    }
+  }
+  .footer {
+    .container {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+    &__wraper {
+      text-align: left;
+      &:first-child {
+        margin: 0;
+        flex-basis: 250px;
+
+        margin-right: 90px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .footer-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    &__input {
+      min-width: 358px;
+      margin: 0;
+    }
+    &__btn {
+      margin-left: 12px;
+    }
+  }
+  .modal {
+    width: 528px;
+  }
+  .checkbox__icon {
+    left: 35px;
+  }
+}

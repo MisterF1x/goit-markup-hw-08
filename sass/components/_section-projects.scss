@@ -1,8 +1,12 @@
 .filter {
   display: flex;
-  justify-content: center;
-  gap: 8px;
+  flex-wrap: wrap;
+  margin: -8px;
   margin-bottom: 50px;
+
+  &__item {
+    margin: 8px;
+  }
   &__btn {
     font-family: inherit;
     font-weight: 500;
@@ -34,11 +38,12 @@
 }
 .projects {
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-
-  &__list {
-    flex-basis: calc((100% - 60px) / 3);
+  flex-direction: column;
+  &__item {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   &__link {
     display: block;

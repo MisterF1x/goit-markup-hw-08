@@ -1,9 +1,9 @@
 .feature-list {
-  display: flex;
-  gap: 30px;
-
   &__item {
-    flex-basis: calc((100% - 90px) / 4);
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   &__wraper {
     background-color: $background-accent-color;

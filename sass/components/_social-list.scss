@@ -1,10 +1,35 @@
+.social {
+  display: flex;
+  margin-bottom: 48px;
+
+  &__item {
+    border-right: 1px solid rgba($text-primary-color, 0.2);
+    &:last-child {
+      border-right: none;
+    }
+  }
+  &__link {
+    color: $primary-color;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    padding: 0 5px;
+    @media screen and (max-width: 475px) {
+      font-size: 16px;
+    }
+  }
+}
 .social-list {
   display: flex;
-  gap: 10px;
-
+  justify-content: center;
   &__item {
     width: 44px;
     height: 44px;
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
   }
   &__link {
     display: flex;
