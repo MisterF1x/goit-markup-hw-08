@@ -1445,6 +1445,11 @@ body {
   .footer__wraper:last-child {
     margin-bottom: 0;
   }
+  .footer .social-list {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer-form {
