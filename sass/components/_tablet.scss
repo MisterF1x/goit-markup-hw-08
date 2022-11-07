@@ -114,8 +114,11 @@
     flex-wrap: wrap;
     margin: -15px;
     &__item {
-      flex-basis: calc((100% - 60px) / 2);
+      width: calc((100% - 60px) / 2);
       margin: 15px;
+      &:last-child {
+        margin-bottom: 15px;
+      }
     }
   }
   .team-list {
@@ -123,7 +126,7 @@
     flex-wrap: wrap;
     margin: -15px;
     &__item {
-      flex-basis: calc((100% - 60px) / 2);
+      width: calc((100% - 60px) / 2);
       margin: 15px;
       &:last-child {
         margin-bottom: 15px;
@@ -151,13 +154,16 @@
     &__item {
       flex-basis: calc((100% - 60px) / 2);
       margin: 15px;
+      &:last-child {
+        margin-bottom: 15px;
+      }
     }
   }
   .footer {
     &__group {
       display: flex;
       align-items: baseline;
-      margin-bottom: 60px;
+      margin-bottom: 55px;
     }
     &__wraper {
       flex-basis: calc((100% - 30px) / 2);

@@ -91,6 +91,18 @@
 }
 .close {
   margin-left: auto;
+  &::before,
+  &::after {
+    position: absolute;
+    content: ' ';
+    height: 18px;
+    width: 2px;
+    background-color: currentColor;
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
   &:hover,
   &:focus {
     color: $primary-color;

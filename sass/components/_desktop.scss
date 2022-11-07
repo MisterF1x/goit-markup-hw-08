@@ -56,13 +56,16 @@
   .feature-list {
     flex-wrap: nowrap;
     &__item {
-      flex-basis: calc((100% - 120px) / 4);
+      width: calc((100% - 120px) / 4);
+      &:last-child {
+        margin-bottom: 15px;
+      }
     }
   }
   .team-list {
     flex-wrap: nowrap;
     &__item {
-      flex-basis: calc((100% - 120px) / 4);
+      width: calc((100% - 120px) / 4);
     }
   }
   .clients-list {
@@ -83,11 +86,14 @@
       align-items: baseline;
       justify-content: space-between;
     }
+    &__group {
+      margin-bottom: 0;
+    }
     &__wraper {
       text-align: left;
       &:first-child {
         margin: 0;
-        flex-basis: 250px;
+        width: 250px;
 
         margin-right: 90px;
       }
@@ -107,6 +113,9 @@
     &__btn {
       margin-left: 12px;
     }
+  }
+  .backdrop {
+    align-items: center;
   }
   .modal {
     width: 528px;
