@@ -116,9 +116,9 @@
 .footer-form {
   display: flex;
   flex-direction: column;
-
+  width: 100%;
   &__title {
-    flex-basis: 100%;
+    width: 100%;
     font-weight: 700;
     line-height: 1.14;
     text-transform: uppercase;
@@ -130,7 +130,7 @@
     line-height: 1.25;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
-    padding: 14px 16px;
+    padding: 0 16px;
     height: 50px;
     margin-bottom: 20px;
     background-color: transparent;

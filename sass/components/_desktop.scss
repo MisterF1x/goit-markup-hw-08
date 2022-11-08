@@ -81,25 +81,14 @@
     }
   }
   .footer {
-    .container {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-    }
-    &__group {
+    text-align: left;
+    &__box {
+      width: calc((100% - 30px) / 2);
       margin-bottom: 0;
+      margin-right: 30px;
     }
-    &__wraper {
-      text-align: left;
-      &:first-child {
-        margin: 0;
-        width: 250px;
-
-        margin-right: 90px;
-      }
-      &:last-child {
-        margin-bottom: 0;
-      }
+    &__form {
+      width: calc((100% - 30px) / 2);
     }
     .social-list {
       justify-content: start;

@@ -4,12 +4,16 @@
   background-color: $background-color;
   color: #fff;
   text-align: center;
-  &__wraper {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__box,
+  &__address {
     margin-bottom: 60px;
   }
-  &--last {
-    margin-bottom: 0;
-  }
+
   &__title {
     font-weight: 700;
     line-height: 1.14;

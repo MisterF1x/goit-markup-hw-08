@@ -157,17 +157,23 @@
     }
   }
   .footer {
-    &__group {
+    .container {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    &__box {
       display: flex;
       align-items: baseline;
       margin-bottom: 55px;
+      width: 100%;
     }
-    &__wraper {
-      flex-basis: calc((100% - 30px) / 2);
+    &__address {
+      width: calc((100% - 30px) / 2);
       margin-bottom: 0;
-      &:first-child {
-        margin-right: 30px;
-      }
+      margin-right: 30px;
+    }
+    &__social {
+      width: calc((100% - 30px) / 2);
     }
     &-form {
       &__input {
