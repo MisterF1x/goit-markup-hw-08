@@ -4,15 +4,15 @@
   }
   .page-header {
     height: 100%;
+    padding: 0;
   }
-  .wraper-menu {
-    display: flex;
+  .navigation {
+    flex-direction: row;
     align-items: center;
     position: inherit;
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow: visible;
     visibility: visible;
     background-color: transparent;
     transform: translateX(0);
@@ -21,12 +21,10 @@
       display: none;
     }
   }
-  .navigation {
-    margin: 0 auto;
-  }
   .menu {
     display: flex;
     font-size: 14px;
+    margin: 0 auto;
     &__item {
       margin-right: 54px;
       margin-bottom: 0;
@@ -65,8 +63,7 @@
   .header-contact {
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    margin-bottom: 0;
+    margin: 0 0 0 auto;
     &__item {
       &:last-child {
         margin-bottom: 10px;
@@ -97,12 +94,12 @@
     &__container {
       max-width: 768px;
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/hero-tablet.jpg);
+        url(../images/tab/hero-tablet.jpg);
       @media screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-          url(../images/hero-tablet@2x.jpg);
+          url(../images/tab/hero-tablet@2x.jpg);
       }
     }
     &__title {
