@@ -19,7 +19,11 @@
       <div class="container">
         <a href="./index.html" class="logo"> Web<span class="logo--black">Studio</span></a>
         <nav class="navigation js-menu-container" id="mobile-menu">
-          <button class="btn-menu close close--left js-close-menu" type="button"></button>
+          <button
+            class="btn-menu close close--left js-close-menu"
+            aria-labelledby="mobile-menu"
+            type="button"
+          ></button>
 
           <ul class="menu">
             <li class="menu__item">
@@ -28,7 +32,9 @@
             <li class="menu__item">
               <a class="menu__link" href="./portfolio.html">Портфоліо</a>
             </li>
-            <li class="menu__item"><a class="menu__link" href="#contacts">Контакти</a></li>
+            <li class="menu__item">
+              <a class="menu__link js-close-menu" href="#contacts">Контакти</a>
+            </li>
           </ul>
 
           <ul class="header-contact">
@@ -411,42 +417,42 @@
           <h2 class="section__title">Постійні клієнти</h2>
           <ul class="clients-list">
             <li class="clients-list__item">
-              <a class="clients-list__link" href="#">
+              <a class="clients-list__link" aria-label="Ya&Co client" href="#">
                 <svg class="clients-list__icon icon">
                   <use href="./images/sprite.svg#icon-yaco"></use>
                 </svg>
               </a>
             </li>
             <li class="clients-list__item">
-              <a class="clients-list__link" href="#">
+              <a class="clients-list__link" aria-label="Tagline client" href="#">
                 <svg class="clients-list__icon icon">
                   <use href="./images/sprite.svg#icon-tagline"></use>
                 </svg>
               </a>
             </li>
             <li class="clients-list__item">
-              <a class="clients-list__link" href="#">
+              <a class="clients-list__link" aria-label="Company client" href="#">
                 <svg class="clients-list__icon icon">
                   <use href="./images/sprite.svg#icon-company"></use>
                 </svg>
               </a>
             </li>
             <li class="clients-list__item">
-              <a class="clients-list__link" href="#">
+              <a class="clients-list__link" aria-label="Foster company" href="#">
                 <svg class="clients-list__icon icon">
                   <use href="./images/sprite.svg#icon-foster"></use>
                 </svg>
               </a>
             </li>
             <li class="clients-list__item">
-              <a class="clients-list__link" href="#">
+              <a class="clients-list__link" aria-label="Brand client" href="#">
                 <svg class="clients-list__icon icon">
                   <use href="./images/sprite.svg#icon-brand"></use>
                 </svg>
               </a>
             </li>
             <li class="clients-list__item">
-              <a class="clients-list__link" href="#">
+              <a class="clients-list__link" aria-label="Ctagline client" href="#">
                 <svg class="clients-list__icon icon">
                   <use href="./images/sprite.svg#icon-ctagline"></use>
                 </svg>
@@ -576,6 +582,7 @@
         </form>
         <button class="close-btn close" type="button" data-modal-close></button>
       </div>
+      <div class="backdrop__overlay" data-modal-close></div>
     </div>
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>

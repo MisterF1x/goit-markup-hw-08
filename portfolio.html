@@ -19,7 +19,11 @@
       <div class="container">
         <a href="./index.html" class="logo"> Web<span class="logo--black">Studio</span></a>
         <nav class="navigation js-menu-container" id="mobile-menu">
-          <button class="btn-menu close close--left js-close-menu" type="button"></button>
+          <button
+            class="btn-menu close close--left js-close-menu"
+            aria-labelledby="mobile-menu"
+            type="button"
+          ></button>
 
           <ul class="menu">
             <li class="menu__item">
@@ -28,7 +32,9 @@
             <li class="menu__item">
               <a class="menu__link menu--current" href="./portfolio.html">Портфоліо</a>
             </li>
-            <li class="menu__item"><a class="menu__link" href="#contacts">Контакти</a></li>
+            <li class="menu__item">
+              <a class="menu__link js-close-menu" href="#contacts">Контакти</a>
+            </li>
           </ul>
 
           <ul class="header-contact">
