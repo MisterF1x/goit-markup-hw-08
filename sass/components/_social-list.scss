@@ -1,5 +1,6 @@
 .social {
   display: flex;
+  flex-wrap: wrap;
 
   &__item {
     border-right: 1px solid rgba($text-primary-color, 0.2);
