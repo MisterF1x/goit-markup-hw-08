@@ -81,19 +81,23 @@
           <h1 class="section__title visually-hidden">Наші проекти</h1>
           <ul class="filter">
             <li class="filter__item">
-              <button class="filter__btn current" type="button">Усі</button>
+              <button class="filter__btn current" type="button" data-name="all">Усі</button>
             </li>
             <li class="filter__item">
-              <button class="filter__btn" type="button">Веб-сайти</button>
+              <button class="filter__btn" type="button" data-name="web">Веб-сайти</button>
             </li>
-            <li class="filter__item"><button class="filter__btn" type="button">Додатки</button></li>
-            <li class="filter__item"><button class="filter__btn" type="button">Дизайн</button></li>
             <li class="filter__item">
-              <button class="filter__btn" type="button">Маркетинг</button>
+              <button class="filter__btn" type="button" data-name="app">Додатки</button>
+            </li>
+            <li class="filter__item">
+              <button class="filter__btn" type="button" data-name="design">Дизайн</button>
+            </li>
+            <li class="filter__item">
+              <button class="filter__btn" type="button" data-name="marketing">Маркетинг</button>
             </li>
           </ul>
           <ul class="projects">
-            <li class="projects__item">
+            <li class="projects__item" data-key="web">
               <a class="projects__link" href="#">
                 <div class="projects__thumb">
                   <picture>
@@ -130,7 +134,7 @@
                 </div>
               </a>
             </li>
-            <li class="projects__item">
+            <li class="projects__item" data-key="design">
               <a class="projects__link" href="#">
                 <div class="projects__thumb">
                   <picture>
@@ -167,7 +171,7 @@
                 </div>
               </a>
             </li>
-            <li class="projects__item">
+            <li class="projects__item" data-key="app">
               <a class="projects__link" href="#">
                 <div class="projects__thumb">
                   <picture>
@@ -203,7 +207,7 @@
                 </div>
               </a>
             </li>
-            <li class="projects__item">
+            <li class="projects__item" data-key="marketing">
               <a class="projects__link" href="#">
                 <div class="projects__thumb">
                   <picture>
@@ -240,7 +244,7 @@
                 </div>
               </a>
             </li>
-            <li class="projects__item">
+            <li class="projects__item" data-key="app">
               <a class="projects__link" href="#">
                 <div class="projects__thumb">
                   <picture>
@@ -277,7 +281,7 @@
                 </div>
               </a>
             </li>
-            <li class="projects__item">
+            <li class="projects__item" data-key="web">
               <a class="projects__link" href="#">
                 <div class="projects__thumb">
                   <picture>
@@ -317,7 +321,7 @@
                 </div>
               </a>
             </li>
-            <li class="projects__item">
+            <li class="projects__item" data-key="design">
               <a class="projects__link" href="#">
                 <div class="projects__thumb">
                   <picture>
@@ -354,7 +358,7 @@
                 </div>
               </a>
             </li>
-            <li class="projects__item">
+            <li class="projects__item" data-key="marketing">
               <a class="projects__link" href="#">
                 <div class="projects__thumb">
                   <picture>
@@ -388,7 +392,7 @@
                 </div>
               </a>
             </li>
-            <li class="projects__item">
+            <li class="projects__item" data-key="app">
               <a class="projects__link" href="#">
                 <div class="projects__thumb">
                   <picture>
@@ -511,17 +515,13 @@
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal></div>
-    <script src="./js/modal.js"></script>
-    <script src="./js/mobile-menu.js"></script>
-    <script>
-      (() => {
-        document.querySelector('.js-speaker-form').addEventListener('submit', e => {
-          e.preventDefault();
-
-          new FormData(e.currentTarget).forEach((value, name) => console.log(`${name}: ${value}`));
-          e.currentTarget.reset();
-        });
-      })();
-    </script>
+    <script
+      defer=""
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/modal.js" type="module"></script>
+    <script src="./js/mobile-menu.js" type="module"></script>
   </body>
 </html>

@@ -3,22 +3,18 @@
   const openMenuBtn = document.querySelector('.js-open-menu');
   const closeMenuBtn = document.querySelectorAll('.js-close-menu');
 
-
   const toggleMenu = () => {
-    const isMenuOpen =
-      openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+    const isMenuOpen = openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
     openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
     mobileMenu.classList.toggle('is-open');
 
-    const scrollLockMethod = !isMenuOpen
-      ? 'disableBodyScroll'
-      : 'enableBodyScroll';
+    const scrollLockMethod = !isMenuOpen ? 'disableBodyScroll' : 'enableBodyScroll';
     bodyScrollLock[scrollLockMethod](document.body);
   };
 
   openMenuBtn.addEventListener('click', toggleMenu);
-  closeMenuBtn.forEach(function (item) {
-    item.addEventListener('click', toggleMenu);
+  closeMenuBtn.forEach(element => {
+    element.addEventListener('click', toggleMenu);
   });
 
   // Close the mobile menu on wider screens if the device orientation changes
@@ -29,3 +25,42 @@
     bodyScrollLock.enableBodyScroll(document.body);
   });
 })();
+
+const refs = {
+  liCards: document.querySelectorAll('li[data-key]'),
+  ulFilter: document.querySelector('.filter'),
+  ulProject: document.querySelector('.projects'),
+};
+
+refs.ulFilter?.addEventListener('click', onButtonsFilterClick);
+
+function onButtonsFilterClick(e) {
+  const filter = e.target.dataset.name;
+  const currentActiveBtn = document.querySelector('.current');
+
+  if (e.target.nodeName !== 'BUTTON') return;
+
+  currentActiveBtn?.classList.remove('current');
+  e.target.classList.add('current');
+  //Варіант 1
+  let filtered = [].filter.call(refs.liCards, element => {
+    if (filter === 'all') {
+      return refs.liCards;
+    }
+    return element.dataset.key === filter;
+  });
+  refs.ulProject.innerHTML = '';
+  refs.ulProject.append(...filtered);
+  //Варіант 2
+  // refs.liCards.forEach(el => {
+  //   if (el.hasAttribute('style')) {
+  //     el.removeAttribute('style');
+  //   }
+  //   if (el.dataset.key !== filter) {
+  //     el.style.display = 'none';
+  //   }
+  //   if (filter === 'all') {
+  //     el.removeAttribute('style');
+  //   }
+  // });
+}
