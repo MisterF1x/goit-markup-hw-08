@@ -1,7 +1,8 @@
 (() => {
   const mobileMenu = document.querySelector('.js-menu-container');
   const openMenuBtn = document.querySelector('.js-open-menu');
-  const closeMenuBtn = document.querySelectorAll('.js-close-menu');
+  const closeMenuBtn = document.querySelector('.js-close-menu');
+  const closeMenuLink = document.querySelector('.js-close-menu[href]');
 
   const toggleMenu = () => {
     const isMenuOpen = openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
@@ -12,20 +13,22 @@
     bodyScrollLock[scrollLockMethod](document.body);
   };
 
-  openMenuBtn.addEventListener('click', toggleMenu);
-  closeMenuBtn.forEach(element => {
-    element.addEventListener('click', toggleMenu);
-  });
-
-  // Close the mobile menu on wider screens if the device orientation changes
-  window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
-    if (!e.matches) return;
+  const closeMobileMenu = () => {
     mobileMenu.classList.remove('is-open');
     openMenuBtn.setAttribute('aria-expanded', false);
     bodyScrollLock.enableBodyScroll(document.body);
+  };
+
+  openMenuBtn.addEventListener('click', toggleMenu);
+  closeMenuBtn.addEventListener('click', toggleMenu);
+  closeMenuLink.addEventListener('click', closeMobileMenu);
+  // Close the mobile menu on wider screens if the device orientation changes
+  window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
+    if (!e.matches) return;
+    closeMobileMenu();
   });
 })();
-
+// ------------------filter
 const refs = {
   liCards: document.querySelectorAll('li[data-key]'),
   ulFilter: document.querySelector('.filter'),
